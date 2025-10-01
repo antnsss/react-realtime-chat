@@ -111,7 +111,7 @@ export default function ChatContainer() {
     }
   };
 
-  const handleSelectUser = (username: string) => setSelectedUser(username);
+ 
 
   return (
     <div className="flex justify-center p-4">
@@ -120,12 +120,12 @@ export default function ChatContainer() {
         <PrivateMessagesContainer
           users={privateUsers}
           selectedUser={selectedUser}
-          onSelectUser={handleSelectUser}
+          onSelectUser={setSelectedUser}
         />
 
         {/* Основний чат */}
         <div className="flex-1 flex flex-col">
-          <div className="h-80 overflow-y-scroll border border-gray-300 p-3 rounded-lg bg-gray-50 mb-3">
+          <div className="h-180 overflow-y-scroll border border-gray-300 p-3 rounded-lg bg-gray-50 mb-3">
             {messages
               .filter((m) => {
                 const chatId =
